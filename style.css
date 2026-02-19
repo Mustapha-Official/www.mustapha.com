@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes wave {
+  0%, 100% {transform: translateY(0);}
+  25% {transform: translateY(-10px);}
+  50% {transform: translateY(10px);}
+  75% {transform: translateY(-5px);}
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Navigation */
+header {
+  background: #F7B30D;
+  color: #000000;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.9rem;
+  font-weight: bold;
+  font-family: cursive;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #1D3B3F;
+}
+
+/* Sections */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section h2{
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #F7B30D;
+  padding-bottom: 5px;
+  color: #F7B30D;
+}
+
+/* Home */
+.home-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.home-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.home-buttons {
+  margin-top: 20px;
+}
+
+.home-buttons .btn {
+  margin: 5px;
+  color: #FFFFFF;
+}
+
+.home-image {
+  flex: 1;
+  text-align: center;
+}
+
+.home-image img {
+  max-width: 300px;
+  border-radius: 20px;
+  animation: wave 10s infinite;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: #000000;
+  color: #F7B30D;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #46484A;
+}
+
+/* Grid */
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card {
+  background: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.card:hover{
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.card img {
+  max-width: 100px;
+  margin-bottom: 10px;
+}
+
+/* Hobbies */
+.hobby-list {
+  list-style: square;
+  margin: 20px auto;
+  text-align: left;
+}
+
+/* Contact */
+.contact form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact input, .contact textarea {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact button {
+  margin-top: 10px;
+}
+
+/* Footer */
+footer {
+  background: #F7B30D;
+  color: #000000;
+  text-align: center;
+  padding: 15px;
+}
+
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 3px;
+    text-align: center;
+  }
+
+  .nav-links {
+    display: flex;
+    margin-top: 10px;
+    font-size: 11px;
+    padding: 5px;
+  }
+
+  .home-content {
+    display: flex;
+    font-size: 11px;
+  }
+  
+  .home-image img {
+  max-width: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  animation: wave 15s infinite;
+}
+  /* Grid */
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.card {
+  background: #F7B30D;
+  padding: 15px;
+  border-radius: 8px;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 10px #000000D6;
+  text-align: center;
+}
+
+.card img {
+  max-width: 100px;
+  margin-bottom: 10px;
+}
+}
